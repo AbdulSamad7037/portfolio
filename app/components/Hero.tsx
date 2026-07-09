@@ -85,7 +85,7 @@ export default function Hero() {
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-8">
 
               <a
-                href="/Abduls.pdf"
+                href="/Abdul_Samad_F.pdf"
                 download
                 className="bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-lg flex items-center gap-2"
               >
