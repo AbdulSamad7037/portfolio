@@ -1,42 +1,27 @@
 "use client";
 
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaArrowUp,
-} from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaEnvelope, FaArrowUp } from "react-icons/fa6";
 
 export default function Footer() {
   return (
     <footer className="bg-[#0b1120] border-t border-gray-800 py-8">
-
       <div className="max-w-6xl mx-auto px-6">
-
         {/* Top */}
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-
           {/* Logo */}
 
           <div className="text-center md:text-left">
-
-            <h2 className="text-3xl  font-black text-blue-500">
-              AS.
-            </h2>
+            <h2 className="text-3xl  font-black text-blue-500">AS.</h2>
 
             <p className="text-gray-400 text-sm mt-2">
               Frontend Developer | React | Next.js
             </p>
-
           </div>
-
-          
 
           {/* Social */}
 
           <div className="flex gap-4">
-
             <a
               href="https://github.com/AbdulSamad7037"
               target="_blank"
@@ -61,9 +46,7 @@ export default function Footer() {
             >
               <FaEnvelope />
             </a>
-
           </div>
-
         </div>
 
         {/* Divider */}
@@ -73,7 +56,6 @@ export default function Footer() {
         {/* Bottom */}
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-
           <p className="text-gray-500  text-sm">
             © 2026 Abdul Samad. All Rights Reserved.
           </p>
@@ -84,11 +66,8 @@ export default function Footer() {
           >
             <FaArrowUp />
           </a>
-
         </div>
-
       </div>
-
     </footer>
   );
 }

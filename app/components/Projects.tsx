@@ -27,7 +27,8 @@ const projects = [
 
   {
     title: "Sales Dashboard",
-    description: "Interactive Power BI dashboard for sales analysis.",
+    description:
+      "Interactive Power BI dashboard for sales analysis using Sql and python.",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
     tech: ["Power BI", "SQL"],
@@ -37,7 +38,8 @@ const projects = [
 
   {
     title: "EdTech Startup Analysis",
-    description: "Power BI dashboard analyzing startup funding and growth.",
+    description:
+      "Analyzed EdTech startup trends using real-world datasets to uncover funding patterns and market growth.",
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
     tech: ["Power BI", "Python", "SQL"],
@@ -47,7 +49,8 @@ const projects = [
 
   {
     title: "Contact Form",
-    description: "Responsive contact form with validation.",
+    description:
+      "Developed a modern contact form with real-time validation and a responsive layoutDeveloped a modern contact form with real-time validation and a responsive layout. Ensures a smooth  experience.",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
     tech: ["React", "Tailwind CSS"],
@@ -55,38 +58,40 @@ const projects = [
     github: "https://github.com/AbdulSamad7037/contact-form",
     hasLive: true,
   },
+
+  {
+    title: "Browser Extension Manager",
+    description:
+      "A modern browser extension manager built with Next.js, TypeScript, and Tailwind CSS. Users can filter extensions by Active, Inactive.",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    live: "https://browser-extension-manager-c1qv.vercel.app/",
+    github: "https://github.com/AbdulSamad7037/browser-extension-manager",
+    hasLive: true,
+  },
 ];
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="py-16 px-6 bg-[#020817] scroll-mt-20"
-    >
+    <section id="projects" className="py-16 px-6 bg-[#020817] scroll-mt-20">
       <div className="max-w-6xl mx-auto">
-
         {/* Heading */}
 
         <div className="text-center mb-12">
-
           <span className="text-blue-500 uppercase tracking-widest font-semibold">
             Portfolio
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-2">
-            My Projects
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mt-2">My Projects</h2>
 
           <div className="w-20 h-1 bg-blue-500 rounded-full mx-auto mt-4"></div>
-
         </div>
 
         {/* Project Grid */}
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
           {projects.map((project) => (
-
             <div
               key={project.title}
               className="
@@ -101,7 +106,6 @@ export default function Projects() {
                 duration-300
               "
             >
-
               {/* Image */}
 
               <img
@@ -113,10 +117,7 @@ export default function Projects() {
               {/* Content */}
 
               <div className="p-5">
-
-                <h3 className="text-xl font-semibold">
-                  {project.title}
-                </h3>
+                <h3 className="text-xl font-semibold">{project.title}</h3>
 
                 <p className="text-gray-400 text-sm mt-2 leading-6">
                   {project.description}
@@ -125,9 +126,7 @@ export default function Projects() {
                 {/* Tech */}
 
                 <div className="flex flex-wrap gap-2 mt-4">
-
                   {project.tech.map((tech) => (
-
                     <span
                       key={tech}
                       className="
@@ -141,17 +140,13 @@ export default function Projects() {
                     >
                       {tech}
                     </span>
-
                   ))}
-
                 </div>
 
                 {/* Buttons */}
 
                 <div className="flex gap-3 mt-5">
-
                   {project.hasLive ? (
-
                     <>
                       <a
                         href={project.live}
@@ -196,9 +191,7 @@ export default function Projects() {
                         <FaGithub />
                       </a>
                     </>
-
                   ) : (
-
                     <a
                       href={project.github}
                       target="_blank"
@@ -221,19 +214,12 @@ export default function Projects() {
                       <FaGithub />
                       View PBIX on GitHub
                     </a>
-
                   )}
-
                 </div>
-
               </div>
-
             </div>
-
           ))}
-
         </div>
-
       </div>
     </section>
   );
