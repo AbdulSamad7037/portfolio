@@ -1,3 +1,171 @@
 [33m0400946[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Update resume link
 [33m7d6a2d1[m Initial commit
 [33mf2890a5[m Initial commit from Create Next App
+[1mdiff --git a/app/components/Projects.tsx b/app/components/Projects.tsx[m
+[1mindex 49338d0..23660cf 100644[m
+[1m--- a/app/components/Projects.tsx[m
+[1m+++ b/app/components/Projects.tsx[m
+[36m@@ -27,7 +27,8 @@[m [mconst projects = [[m
+ [m
+   {[m
+     title: "Sales Dashboard",[m
+[31m-    description: "Interactive Power BI dashboard for sales analysis.",[m
+[32m+[m[32m    description:[m
+[32m+[m[32m      "Interactive Power BI dashboard for sales analysis using Sql and python.",[m
+     image:[m
+       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",[m
+     tech: ["Power BI", "SQL"],[m
+[36m@@ -37,7 +38,8 @@[m [mconst projects = [[m
+ [m
+   {[m
+     title: "EdTech Startup Analysis",[m
+[31m-    description: "Power BI dashboard analyzing startup funding and growth.",[m
+[32m+[m[32m    description:[m
+[32m+[m[32m      "Analyzed EdTech startup trends using real-world datasets to uncover funding patterns and market growth.",[m
+     image:[m
+       "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",[m
+     tech: ["Power BI", "Python", "SQL"],[m
+[36m@@ -47,7 +49,8 @@[m [mconst projects = [[m
+ [m
+   {[m
+     title: "Contact Form",[m
+[31m-    description: "Responsive contact form with validation.",[m
+[32m+[m[32m    description:[m
+[32m+[m[32m      "Developed a modern contact form with real-time validation and a responsive layoutDeveloped a modern contact form with real-time validation and a responsive layout. Ensures a smooth  experience.",[m
+     image:[m
+       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",[m
+     tech: ["React", "Tailwind CSS"],[m
+[36m@@ -55,38 +58,40 @@[m [mconst projects = [[m
+     github: "https://github.com/AbdulSamad7037/contact-form",[m
+     hasLive: true,[m
+   },[m
+[32m+[m
+[32m+[m[32m  {[m
+[32m+[m[32m    title: "Browser Extension Manager",[m
+[32m+[m[32m    description:[m
+[32m+[m[32m      "A modern browser extension manager built with Next.js, TypeScript, and Tailwind CSS. Users can filter extensions by Active, Inactive.",[m
+[32m+[m[32m    image:[m
+[32m+[m[32m      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",[m
+[32m+[m[32m    tech: ["Next.js", "TypeScript", "Tailwind CSS"],[m
+[32m+[m[32m    live: "https://browser-extension-manager-c1qv.vercel.app/",[m
+[32m+[m[32m    github: "https://github.com/AbdulSamad7037/browser-extension-manager",[m
+[32m+[m[32m    hasLive: true,[m
+[32m+[m[32m  },[m
+ ];[m
+ [m
+ export default function Projects() {[m
+   return ([m
+[31m-    <section[m
+[31m-      id="projects"[m
+[31m-      className="py-16 px-6 bg-[#020817] scroll-mt-20"[m
+[31m-    >[m
+[32m+[m[32m    <section id="projects" className="py-16 px-6 bg-[#020817] scroll-mt-20">[m
+       <div className="max-w-6xl mx-auto">[m
+[31m-[m
+         {/* Heading */}[m
+ [m
+         <div className="text-center mb-12">[m
+[31m-[m
+           <span className="text-blue-500 uppercase tracking-widest font-semibold">[m
+             Portfolio[m
+           </span>[m
+ [m
+[31m-          <h2 className="text-4xl md:text-5xl font-bold mt-2">[m
+[31m-            My Projects[m
+[31m-          </h2>[m
+[32m+[m[32m          <h2 className="text-4xl md:text-5xl font-bold mt-2">My Projects</h2>[m
+ [m
+           <div className="w-20 h-1 bg-blue-500 rounded-full mx-auto mt-4"></div>[m
+[31m-[m
+         </div>[m
+ [m
+         {/* Project Grid */}[m
+ [m
+         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">[m
+[31m-[m
+           {projects.map((project) => ([m
+[31m-[m
+             <div[m
+               key={project.title}[m
+               className="[m
+[36m@@ -101,7 +106,6 @@[m [mexport default function Projects() {[m
+                 duration-300[m
+               "[m
+             >[m
+[31m-[m
+               {/* Image */}[m
+ [m
+               <img[m
+[36m@@ -113,10 +117,7 @@[m [mexport default function Projects() {[m
+               {/* Content */}[m
+ [m
+               <div className="p-5">[m
+[31m-[m
+[31m-                <h3 className="text-xl font-semibold">[m
+[31m-                  {project.title}[m
+[31m-                </h3>[m
+[32m+[m[32m                <h3 className="text-xl font-semibold">{project.title}</h3>[m
+ [m
+                 <p className="text-gray-400 text-sm mt-2 leading-6">[m
+                   {project.description}[m
+[36m@@ -125,9 +126,7 @@[m [mexport default function Projects() {[m
+                 {/* Tech */}[m
+ [m
+                 <div className="flex flex-wrap gap-2 mt-4">[m
+[31m-[m
+                   {project.tech.map((tech) => ([m
+[31m-[m
+                     <span[m
+                       key={tech}[m
+                       className="[m
+[36m@@ -141,17 +140,13 @@[m [mexport default function Projects() {[m
+                     >[m
+                       {tech}[m
+                     </span>[m
+[31m-[m
+                   ))}[m
+[31m-[m
+                 </div>[m
+ [m
+                 {/* Buttons */}[m
+ [m
+                 <div className="flex gap-3 mt-5">[m
+[31m-[m
+                   {project.hasLive ? ([m
+[31m-[m
+                     <>[m
+                       <a[m
+                         href={project.live}[m
+[36m@@ -196,9 +191,7 @@[m [mexport default function Projects() {[m
+                         <FaGithub />[m
+                       </a>[m
+                     </>[m
+[31m-[m
+                   ) : ([m
+[31m-[m
+                     <a[m
+                       href={project.github}[m
+                       target="_blank"[m
+[36m@@ -221,20 +214,13 @@[m [mexport default function Projects() {[m
+                       <FaGithub />[m
+                       View PBIX on GitHub[m
+                     </a>[m
+[31m-[m
+                   )}[m
+[31m-[m
+                 </div>[m
+[31m-[m
+               </div>[m
+[31m-[m
+             </div>[m
+[31m-[m
+           ))}[m
+[31m-[m
+         </div>[m
+[31m-[m
+       </div>[m
+     </section>[m
+   );[m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m

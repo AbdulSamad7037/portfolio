@@ -70,6 +70,18 @@ const projects = [
     github: "https://github.com/AbdulSamad7037/browser-extension-manager",
     hasLive: true,
   },
+
+  {
+    title: "Expense Tracker",
+    description:
+      "A full-stack Expense Tracker built with Next.js, TypeScript, and MySQL, featuring secure JWT authentication, income and expense management, monthly budgeting, and interactive financial dashboards.",
+    image:
+      "https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D",
+    tech: ["Next.js", "SQL", "TypeScript", "Tailwind CSS"],
+    live: "https://vercel.com/abdul-samad-s-projects1/expense-tracker-7z9y",
+    github: "https://github.com/AbdulSamad7037/expense-tracker",
+    hasLive: true,
+  },
 ];
 
 export default function Projects() {
